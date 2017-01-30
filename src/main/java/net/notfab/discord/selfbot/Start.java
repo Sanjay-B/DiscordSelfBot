@@ -15,6 +15,7 @@ public class Start {
         if(!config.exists()) {
             JSONObject o = new JSONObject();
             o.put("Email", "your-email@here.please");
+            o.put("Token", "YOURBOTTOKENHERE"); //In the Event you ever want to make this an actual bot
             o.put("Password", "yourpasswordhere");
             FileUtils.writeFile(config, o);
         }
