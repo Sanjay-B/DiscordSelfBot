@@ -1,4 +1,4 @@
-# Discord Self BOT
+# Discord BOT
 This is a basic discord bot made for my own account, it serves some "useful" commands.
 
 Made By: Fabricio20
