@@ -16,7 +16,6 @@ Using:
 ## Command List
 - /help      | Displays this help message
 - /lenny     | Pastes lenny
-- /lenny     | Pastes lenny
 - /shrug     | Shrugs
 - /idle      | Sets IDLE status
 - /abal      | Mentions abalabahaha
