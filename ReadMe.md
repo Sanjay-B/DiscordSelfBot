@@ -11,7 +11,7 @@ Using:
 - Lombok
 - Jsoup
 - JSON
-- JDA 1.4.0_238
+- JDA 3.X
 
 ## Command List
 - /help      | Displays this help message
@@ -44,11 +44,14 @@ Before doing anything else, make sure you have JAVA 8 installed on your computer
 1. Go to the [Releases](https://github.com/Fabricio20/DiscordSelfBot/releases) Page
 2. Download the latest version
 3. Extract the ZIP file
-4. Open up BotConfig.json and change `your-email@here.please` to your email
-5. Also change `yourpasswordhere` to your password
-6. Save the file and exit your text editor
-7. Run DiscordSelfBOT.jar
-8. Profit!!?!
+4. Open up discord and open the inspector window (`CTRL` + `SHIFT` + `I`)
+5. Go to the `Application` page
+6. Under `Storage`, select `Local Storage`, and then `discordapp.com`
+7. Find the `token` row and copy the value `that is in quotes`.
+8. Open up Config.json and change `your-token-here-please` to your token
+9. Save the file and exit your text editor
+10. Run DiscordSelfBOT.jar
+11. Profit!!?!
 
 If you need help, you can open up an issue [Here](https://github.com/Fabricio20/DiscordSelfBot/issues), but make sure to paste the logs (run DiscordSelfBOT.jar on CMD).
 

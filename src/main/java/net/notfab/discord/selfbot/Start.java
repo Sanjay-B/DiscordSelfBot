@@ -11,16 +11,13 @@ import java.io.File;
 public class Start {
 
     public static void main(String[] args) {
-        File config = new File("BotConfig.json");
+        File config = new File("Config.json");
         if(!config.exists()) {
             JSONObject o = new JSONObject();
-            o.put("Email", "your-email@here.please");
-            o.put("Password", "yourpasswordhere");
+            o.put("Token", "your-token-here=please");
             FileUtils.writeFile(config, o);
         }
         new Main();
     }
-
-
 
 }

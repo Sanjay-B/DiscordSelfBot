@@ -1,7 +1,7 @@
 package net.notfab.discord.selfbot;
 
-import net.dv8tion.jda.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.hooks.ListenerAdapter;
+import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 /**
  * DiscordSelfBot - http://notfab.net/
@@ -14,17 +14,17 @@ public class MessageListener extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent e) {
-        if(!e.getAuthor().getId().equals(Main.getInstance().getJDA().getSelfInfo().getId())) {
+        if(!e.getAuthor().getId().equals(Main.getInstance().getJDA().getSelfUser().getId())) {
             return;
         }
         if(e.getMessage().getContent().contains("(lenny)")) {
-            e.getMessage().updateMessage(e.getMessage().getRawContent().replace("(lenny)", this.LENNY));
+            e.getMessage().editMessage(e.getMessage().getRawContent().replace("(lenny)", this.LENNY)).queue();
         } else if(e.getMessage().getContent().contains("(shrug)")) {
-            e.getMessage().updateMessage(e.getMessage().getRawContent().replace("(shrug)", this.SHRUG));
+            e.getMessage().editMessage(e.getMessage().getRawContent().replace("(shrug)", this.SHRUG)).queue();
         } else if(e.getMessage().getContent().contains(":lenny:")) {
-            e.getMessage().updateMessage(e.getMessage().getRawContent().replace(":lenny:", this.LENNY));
+            e.getMessage().editMessage(e.getMessage().getRawContent().replace(":lenny:", this.LENNY)).queue();
         } else if(e.getMessage().getContent().contains(":shrug:")) {
-            e.getMessage().updateMessage(e.getMessage().getRawContent().replace(":shrug:", this.SHRUG));
+            e.getMessage().editMessage(e.getMessage().getRawContent().replace(":shrug:", this.SHRUG)).queue();
         }
     }
 
