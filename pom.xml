@@ -101,13 +101,12 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>net.notfab.LewdBot.Start</mainClass>
+                            <mainClass>net.notfab.discord.selfbot.Start</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                         <manifestEntries>
                             <Specification-Title>${project.name}</Specification-Title>
                             <Specification-Version>${project.version}</Specification-Version>
-                            <Implementation-Version>${build.number}</Implementation-Version>
                         </manifestEntries>
                     </archive>
                 </configuration>
