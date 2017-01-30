@@ -10,7 +10,8 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
 public class MessageListener extends ListenerAdapter {
 
     private final String LENNY = "( ͡° ͜ʖ ͡°)";
-    private final String SHRUG = "¯\\_(ツ)_/¯";
+    private final String SHRUG = "¯\_(ツ)_/¯";
+    private final String TABLEFLIP = "(╯°□°）╯︵ ┻━┻"; //Cuz why not? :P 
 
     @Override
     public void onMessageReceived(MessageReceivedEvent e) {
@@ -25,7 +26,11 @@ public class MessageListener extends ListenerAdapter {
             e.getMessage().editMessage(e.getMessage().getRawContent().replace(":lenny:", this.LENNY)).queue();
         } else if(e.getMessage().getContent().contains(":shrug:")) {
             e.getMessage().editMessage(e.getMessage().getRawContent().replace(":shrug:", this.SHRUG)).queue();
+        } else if(e.getMessage().getContent().contains(":tableflip:")) {
+            e.getMessage().editMessage(e.getMessage().getRawContent().replace(":tableflip:", this.TABLEFLIP)).queue();
         }
     }
 
 }
+
+
