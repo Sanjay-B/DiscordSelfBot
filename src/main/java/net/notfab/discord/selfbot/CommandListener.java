@@ -109,11 +109,11 @@ public class CommandListener extends ListenerAdapter {
             if(args.length == 0) {
                 e.getMessage().editMessage("**__Error:__** `>No game provided`").queue();
             } else {
-                String oldGame = Main.getInstance().getJDA().getPresence().getGame().getName();
+                Game oldGame = Main.getInstance().getJDA().getPresence().getGame();
                 String newGame = argsToString(args, 1);
                 try {
                     Main.getInstance().getJDA().getPresence().setGame(Game.of(newGame));
-                    e.getMessage().editMessage("**__Game:__** `" + (oldGame == null ? "" : oldGame) + "` -> `" + newGame + "`").queue();
+                    e.getMessage().editMessage("**__Game:__** `" + (oldGame == null ? "" : oldGame.getName()) + "` -> `" + newGame + "`").queue();
                 } catch (Exception ex) {
                     e.getMessage().editMessage("**__Error:__** `>" + ex.getMessage() + "`").queue();
                 }
